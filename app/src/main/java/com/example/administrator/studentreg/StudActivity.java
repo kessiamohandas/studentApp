@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class StudActivity extends AppCompatActivity {
 EditText ed1,ed2;
-    Button b1,b2;
+    Button b1,b2,b3;
     String s1,s2;
     String sid="mzc";
     String sp="college";
@@ -22,6 +22,7 @@ EditText ed1,ed2;
         ed2 = (EditText) findViewById(R.id.pass);
         b1 = (Button) findViewById(R.id.login);
         b2 = (Button) findViewById(R.id.register);
+        b3=(Button)findViewById(R.id.view) ;
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,5 +55,14 @@ EditText ed1,ed2;
 
             }
         });
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent m=new Intent(getApplicationContext(),userlist.class);
+                startActivity(m);
+            }
+        }
+        );
     }
 }
+
